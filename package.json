@@ -1,5 +1,8 @@
 {
   "name": "hayachine",
   "version": "0.0.1",
-  "repository": "git@github.com:otukutun/hayachine.git"
+  "repository": "git@github.com:otukutun/hayachine.git",
+  "dependencies": {
+    "bulma": "^0.2.3"
+  }
 }
