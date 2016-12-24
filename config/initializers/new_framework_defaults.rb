@@ -22,3 +22,12 @@ ActiveSupport.halt_callback_chains_on_return_false = false
 
 # Configure SSL options to enable HSTS with subdomains. Previous versions had false.
 Rails.application.config.ssl_options = { hsts: { subdomains: true } }
+
+Rails.application.config.generators do |g|
+  g.orm :active_record
+  g.template_engine :slim
+  g.test_framework :test_unit, fixture: false
+  g.assets false
+  g.helper false
+  g.jbuilder false
+end
