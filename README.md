@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# README
+
+## Set Up
+
+```
+$ bin/rails db:create
+```
