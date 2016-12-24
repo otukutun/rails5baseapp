@@ -30,4 +30,5 @@ Things you may want to cover:
 ```
 $ bin/rails db:create
 $ yarn install
+$ bin/rails db:migrate
 ```
