@@ -22,6 +22,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
+gem 'devise-i18n'
 gem 'slim-rails'
 
 # Use jquery as the JavaScript library
