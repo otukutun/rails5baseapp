@@ -23,12 +23,21 @@ Things you may want to cover:
 
 * ...
 
-# README
+## 開発環境
+- Ruby 2.3.0~
+- PostgreSQL 9.4.5
 
-## Set Up
+## セットアップ
 
 ```
 $ bin/rails db:create
 $ yarn install
 $ bin/rails db:migrate
+```
+
+
+## サーバ起動
+
+```
+$ bin/rails s
 ```
