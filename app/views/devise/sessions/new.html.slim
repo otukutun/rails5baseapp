@@ -13,7 +13,7 @@ h2.subtitle
     p.control
       = f.label :remember_me, class: 'checkbox'
         = f.check_box :remember_me
-        = " " + I18n.t('activerecord.attributes.user.remember_me')
+        = ' ' + I18n.t('activerecord.attributes.user.remember_me')
   p.control
     = f.submit I18n.t('devise.sessions.new.sign_in'), class: 'button is-success'
 = render "devise/shared/links"
