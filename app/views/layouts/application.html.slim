@@ -19,6 +19,7 @@ html
                 - if user_signed_in?
                   = link_to 'ログアウト', destroy_user_session_path, method: :delete
                 - else
-                  = link_to 'ログイン', new_user_session_path
-
-    = yield
+                  = link_to I18n.t('devise.registrations.new.sign_up'), new_user_session_path
+    section.section
+      .container
+        = yield
