@@ -13,7 +13,7 @@ html
           nav.nav
             .nav-left
               .nav-item.is-brand
-                | Hayachine
+                = link_to 'Hayachine', root_path
             .nav-right
               .nav-item.is-brand
                 - if user_signed_in?
