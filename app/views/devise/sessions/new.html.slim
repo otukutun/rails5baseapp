@@ -1,3 +1,5 @@
+= render 'devise/shared/links'
+
 h2.subtitle
   = I18n.t('devise.sessions.new.sign_in')
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
@@ -16,4 +18,3 @@ h2.subtitle
         = ' ' + I18n.t('activerecord.attributes.user.remember_me')
   p.control
     = f.submit I18n.t('devise.sessions.new.sign_in'), class: 'button is-success'
-= render "devise/shared/links"
