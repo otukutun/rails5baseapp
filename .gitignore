@@ -18,3 +18,5 @@
 
 # yarn
 node_modules
+/public/packs
+/node_modules
