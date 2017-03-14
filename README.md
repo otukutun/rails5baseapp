@@ -20,6 +20,7 @@
 $ docker-compose build
 $ docker-compose run web bin/rails db:create RAILS_ENV=development
 $ docker-compose run web bin/rails db:migrate RAILS_ENV=development
+$ docker-compose run --service-ports web bin/rails db:seed RAILS_ENV=development
 ```
 
 ### Mac
@@ -29,6 +30,7 @@ $ bundle install --path vendor/bundle
 $ bin/rails db:create
 $ yarn install
 $ bin/rails db:migrate
+$ bin/rails db:seed RAILS_ENV=development
 ```
 
 ## 開発
