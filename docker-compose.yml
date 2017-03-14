@@ -1,0 +1,29 @@
+version: '2'
+services:
+  db:
+    image: postgres
+  node:
+    build: .
+    command: bin/webpack-watcher
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://postgres:@db/himekami_development
+      RAILS_ENV: development
+  web:
+    build: .
+    command: bin/rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - node
+    environment:
+      DATABASE_DEVELOPMENT_URL: postgresql://postgres:@db/himekami_development
+      DATABASE_TEST_URL: postgresql://postgres:@db/himekami_test
+      RAILS_ENV: development
+# REF: byebugを使う設定 http://qiita.com/kbaba1001/items/39f81156589dd9a0d678

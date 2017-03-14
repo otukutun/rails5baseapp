@@ -1,43 +1,60 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 ## 開発環境
-- Ruby 2.3.0~
+### Docker
+- Docker for Macをいれること
+
+### Mac
+- Ruby 2.3.3~
+- Rails 5.0.1
 - PostgreSQL 9.4.5
+- node v7.2.1
+
+## スタイルガイド
+- [Rails](https://github.com/moneyforward/rails-style-guide)
 
 ## セットアップ
+### Docker
 
 ```
+$ docker-compose build
+$ docker-compose run web bin/rails db:create RAILS_ENV=development
+$ docker-compose run web bin/rails db:migrate RAILS_ENV=development
+```
+
+### Mac
+
+```
+$ bundle install --path vendor/bundle
 $ bin/rails db:create
 $ yarn install
 $ bin/rails db:migrate
 ```
 
-
-## サーバ起動
+## 開発
+### Docker
 
 ```
-$ bin/rails s
+$ docker-compose run --service-ports web bin/rails s -b 0.0.0.0
 ```
+
+### Mac
+サーバ起動
+
+```
+$ bin/rails s -b 0.0.0.0
+```
+
+```
+$ bin/webpack-watcher
+```
+
+## テスト実行
+### Docker
+
+```
+$ docker-compose run web bundle exec rspec spec/models/task_spec.rb
+ ```
+
+### Mac
+TODO
