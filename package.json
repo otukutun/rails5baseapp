@@ -1,7 +1,7 @@
 {
-  "name": "hayachine",
+  "name": "himekami",
   "version": "0.0.1",
-  "repository": "git@github.com:otukutun/hayachine.git",
+  "repository": "git@github.com:otukutun/himekami.git",
   "dependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.0",
