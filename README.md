@@ -7,7 +7,7 @@
 ### Mac
 - Ruby 2.3.3~
 - Rails 5.0.1
-- PostgreSQL 9.4.5
+- PostgreSQL 9.6
 - node v7.2.1
 
 ## スタイルガイド
