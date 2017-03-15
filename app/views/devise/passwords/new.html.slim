@@ -5,6 +5,7 @@ h2.subtitle
   = devise_error_messages!
   p.control.has-icon
     = f.email_field :email, autofocus: true, class: 'input', placeholder: I18n.t('activerecord.attributes.user.email')
-    i.fa.fa-envelope
+    span.icon.is-small
+      i.fa.fa-envelope
   p.control
     = f.submit I18n.t('devise.passwords.edit.change_my_password'), class: 'button is-success'
